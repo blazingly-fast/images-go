@@ -24,7 +24,7 @@ func NewLocal(basePath string, maxSize int) (*Local, error) {
 		return nil, err
 	}
 
-	return &Local{basePath: p}, nil
+	return &Local{basePath: p, maxFileSize: maxSize}, nil
 }
 
 // Save the contents of the Writer to the given path
